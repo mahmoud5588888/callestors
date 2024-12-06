@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر سوبر ويب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+        .product {
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+        }
+        .product-details {
+            margin-top: 1rem;
+        }
+        .product-details h3 {
+            margin: 0.5rem 0;
+        }
+        .product-details p {
+            margin: 0.5rem 0;
+        }
+        .product-details span {
+            font-weight: bold;
+        }
+        .order-button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .order-button:hover {
+            background-color: #218838;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>متجر كالي ستورز</h1>
+    </header>
+    <div class="container">
+        <h2>المنتجات</h2>
+        <div class="product">
+            <img src="1.jpg" alt="منتج 1">
+            <div class="product-details">
+                <h3>بارلتس</h3>
+                <p>تفاصيل المنتج: جوز من البارلتس مصنوع من الخشب.</p>
+                <p>السعر: <span>15.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 1', 15.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="8.jpg" alt="منتج 2">
+            <div class="product-details">
+                <h3>حبل مقاومه اخضر</h3>
+                <p>تفاصيل المنتج: حبل مقاومه مقاومته من25 الى 55 كيلوغرام.</p>
+                <p>السعر: <span>8.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 2', 8.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="3.jpg" alt="منتج 3">
+            <div class="product-details">
+                <h3> حبل مقاومه احمر</h3>
+                <p>تفاصيل المنتج: حبل مقاومه احبر قاومته من 15 كيلو الى 35.</p>
+                <p>السعر: <span>3.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 3', 3.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="4.jpg" alt="منتج 4">
+            <div class="product-details">
+                <h3> حبل مقاومه اصفر</h3>
+                <p>تفاصيل المنتج:حبل مقاومة اصفر قدرة مقاومته من 8 الى 15 كيلوغرام.</p>
+                <p>السعر: <span>2.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 4', 2.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="9.jpg" alt="منتج 5">
+            <div class="product-details">
+                <h3> حبل مقاومة اسود</h3>
+                <p>تفاصيل المنتج: حبل مقاومه اسود قدرى مقاومته من25 الى 65 كيلوغرام.</p>
+                <p>السعر: <span>5.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 5', 5.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="6.jpg" alt="منتج 6">
+            <div class="product-details">
+                <h3> حبل مقاومة لون بنفسجي</h3>
+                <p>تفاصيل المنتج::حبل مقاومة مقاومته من16 الى 39 كيلوغرام.</p>
+                <p>السعر: <span>7.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 6', 7.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="2.jpg" alt="منتج 7">
+            <div class="product-details">
+                <h3> عقلة حائط</h3>
+                <p>تفاصيل المنتج: عقلة حائط تحمل اكثر من 200 كيلوغرام القياسات موجودة بلصوره.</p>
+                <p>السعر: <span>34.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 7', 34.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="5.jpg" alt="منتج 8">
+            <div class="product-details">
+                <h3>عقلة باب</h3>
+                <p>تفاصيل المنتج:عقلة حائط طولها من 60 سانتي الى 100 سانتي(قابله للتمدد).</p>
+                <p>السعر: <span>11.99 JD</span></p>
+                <button class="order-button" onclick="addToCart('منتج 8', 11.99)">أضف إلى السلة</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="cart-container">
+            <h2>سلة المشتريات</h2>
+            <ul id="cart-list"></ul>
+            <button id="checkout-button" onclick="checkout()">إتمام الشراء</button>
+        </div>
+    </div>
+    <script>
+        let cart = [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            displayCart();
+        }
+
+        function displayCart() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.product} - ${item.price} JD`;
+                cartList.appendChild(listItem);
+            });
+        }
+
+        function checkout() {
+            const cartDetails = cart.map(item => `${item.product} - ${item.price} JD`).join(', ');
+            const googleFormURL = `https://docs.google.com/forms/d/e/1FAIpQLScuoSjp6aMaREmWr6oQuf7KG5jyNK0g3vtx8jfBmf-b28SkNw/viewform?usp=pp_url&entry.1234567890=${encodeURIComponent(cartDetails)}`;
+            window.location.href = googleFormURL;
+        }
+    </script>
+</body>
+</html>
